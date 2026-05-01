@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Célula Procarionte</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1f2a;
+    color: #fff;
+}
+
+h1{
+  text-align:center;
+  color:yellow;
+}
+h3{
+  text-align:center;
+  color:#24bedec0;
+}
+
+/* IMAGEM TOPO */
+.header img {
+    width: 100%;
+    display: block;
+}
+
+/* CONTAINER */
+.container {
+    padding: 20px;
+}
+
+/* ABAS */
+.tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* BOTÕES */
+.tab-btn {
+    background: #d4a017;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    color: #000;
+    border-radius: 8px 8px 0 0;
+    transition: 0.3s;
+}
+
+.tab-btn:hover {
+    background: #f1c232;
+}
+
+/* CONTEÚDO */
+.tab-content {
+    display: none;
+    background: #123447;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+}
+
+/* ATIVO */
+.active {
+    display: block;
+}
+</style>
+
+</head>
+<body>
+  
+  <h1>BIOLOGIA</h1>
+  
+  <h3>Célula procarionte</h3>
+
+<!-- IMAGEM -->
+<div class="header">
+    <img src="celula.png" alt="Célula Procarionte">
+</div>
+
+<div class="container">
+
+    <div class="tabs">
+        
+        <button class="tab-btn" onclick="abrirTab('geral')">O que é célula procarionte</button>
+        <div id="geral" class="tab-content">
+            São células simples que não possuem núcleo definido. O DNA fica disperso no citoplasma.
+            São típicas de bactérias e arqueias.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('capsula')">Cápsula</button>
+        <div id="capsula" class="tab-content">
+            Camada externa que protege a célula contra desidratação e ataque do sistema imunológico.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('parede')">Parede Celular</button>
+        <div id="parede" class="tab-content">
+            Estrutura rígida que dá forma e proteção à célula.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('membrana')">Membrana Plásmica</button>
+        <div id="membrana" class="tab-content">
+            Controla a entrada e saída de substâncias da célula.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('citoplasma')">Citoplasma</button>
+        <div id="citoplasma" class="tab-content">
+            Região interna onde ocorrem as reações químicas da célula.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('ribossomos')">Ribossomos</button>
+        <div id="ribossomos" class="tab-content">
+            Responsáveis pela produção de proteínas.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('nucleoide')">Nucleoide</button>
+        <div id="nucleoide" class="tab-content">
+            Região onde fica o DNA da célula, sem membrana envolvendo.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('pili')">Pili</button>
+        <div id="pili" class="tab-content">
+            Estruturas que ajudam na fixação e troca de material genético.
+        </div>
+
+        <button class="tab-btn" onclick="abrirTab('flagelo')">Flagelo</button>
+        <div id="flagelo" class="tab-content">
+            Responsável pela locomoção da célula.
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function abrirTab(id) {
+    let conteudos = document.querySelectorAll('.tab-content');
+    conteudos.forEach(c => c.classList.remove('active'));
+
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
